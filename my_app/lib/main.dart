@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            "Paani Paryooo",
+            "Kathmandu",
             style: TextStyle(
               color: Color.fromARGB(255, 61, 46, 46),
               fontSize: 24,
