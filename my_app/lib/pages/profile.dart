@@ -9,15 +9,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      home: ProfilePage(username: ''),
     );
   }
 }
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  final String username;
+  const ProfilePage({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +29,11 @@ class ProfilePage extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: const [
-              Icon(Icons.person, size: 72),
-              SizedBox(height: 16),
-              Text('Student Name'),
-              Text('B.Tech Ed. IT'),
+            children: [
+              const Icon(Icons.person, size: 72),
+              const SizedBox(height: 16),
+              Text(username),
+              const Text('B.Tech Ed. IT'),
             ],
           ),
         ),
